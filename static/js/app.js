@@ -23,3 +23,29 @@ function buildTable(data){
         );
     });
 }
+
+// Creating a function that will handle a button click from a user to filter the date
+function handleClick() {
+    // Selects first item that matches selector string in () and grabs the date values to hold in date variable
+    // Grab the datetime value from the filter
+    let date = d3.select("#datetime").property("value");
+
+    // Setting default filter as the original table data from data.js file
+    let filteredData = tableData;
+
+    // Check to see if a date was entered and filter the data using that date
+    if (date) {
+
+        // Apply 'filter' to the table data to only keep the rows where the 'datetime' value matches the fitler value
+        filteredData = filteredData.filter(row => row.datetime === date);
+    }
+
+    // Rebuild the table using the filtered data; if no date was entered, filteredData will be original tableData
+    buildTable(filteredData);
+};
+
+// Attach an event to listen for the form button
+d3.selectAll("#filter-btn").on("click", handleClick);
+
+// Build the table when the page loads
+buildTable(tableData);
