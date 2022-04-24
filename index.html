@@ -22,7 +22,7 @@
     <!-- Creating a division to hold the navbar-->
     <div class="wrapper">
         <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-            <a class="navbar-brand" href="inde.html">UFO Sightings</a>
+            <a class="navbar-brand" href="index.html">UFO Sightings</a>
         </nav>
     </div>
 
@@ -55,11 +55,25 @@
                     <p>Filter Search</p>
                     <ul class="list-group bg-dark">
                         <li class="list-group-item bg-dark">
-                            <label for="date">Enter Date</label>
+                            <label for="date">Enter Date<br></label>
                             <input type="text" placeholder="1/10/2010" id="datetime" />
                         </li>
                         <li class="list-group-item bg-dark">
-                            <button id="filter-btn" type="button" class="btn btn-dark">Filter Table</button>
+                            <!-- <button id="filter-btn" type="button" class="btn btn-dark">Filter Table</button> -->
+                            <label for="city">Enter a City<br></label>
+                            <input type="text" placeholder="roswell" id="city"/>
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="state">Enter a State<br></label>
+                            <input type="text" placeholder="ca" id="state"/>
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="country">Enter a Country<br></label>
+                            <input type="text" placeholder="us" id="country"/>
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="shape">Enter a Shape<br></label>
+                            <input type="text" placeholder="circle" id="shape"/>
                         </li>
                     </ul>
                 </form>
