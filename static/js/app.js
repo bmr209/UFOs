@@ -66,7 +66,7 @@ function updateFilters() {
       filteredData = filteredData.filter(d=>d[item]===filters[item])
     }
   
-    // 10. Finally, rebuild the table using the filtered data
+    // 10. Rebuild the table using the filtered data
     buildTable(filteredData);
   }
   
